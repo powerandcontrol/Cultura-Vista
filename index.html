@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles/cine.css">
+    <link rel="stylesheet" href="styles/cards.css">
+    <script src="scripts/scripts.js" defer></script>
+    <script src="scripts/busca.js"></script>
+
+</head>
+<body>
+    <header class="header" style="margin-bottom: 30px">
+        <div class="logo">
+            <img src="imgs/logo.png" alt="Logo">
+        </div>
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="catalogo-filmes.html">Catálogo</a>
+            <a href="catalogo.html">Em Cartaz</a>
+            <a href="ajuda.html">Ajuda</a>
+            <form id="search-form" action="filme-selecionado.html" method="get">
+                <input class="movie__search" id="movie-search" name="title" type="text" placeholder="Busque por um filme"/>
+            </form>
+            <a href="#" class="profile-icon"><i class="fas fa-user-circle"></i></a>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Assista a filmes e espetáculos de forma gratuita</h1>
+            <p>Iniciativa governamental em parceria com a Prefeitura do Rio de Janeiro</p>
+            <div class="hero-info">
+                <span><i class="fas fa-calendar-alt"></i> Escolha a melhor data</span>
+                <span><i class="fas fa-credit-card"></i> Preços mais acessíveis</span>
+                <span><i class="fas fa-lock"></i> Compra 100% segura</span>
+            </div>
+        </div>
+    </section>
+    <section class="search">
+        <form class="search-form">
+            <div class="input-group">
+                <label for="municipio">Município</label>
+                <select name="municipios-rj" id="municipios-rj">
+                    <option value="angra-dos-reis">Angra dos Reis</option>
+                    <option value="aperibe">Aperibé</option>
+                    <option value="araruama">Araruama</option>
+                    <option value="areal">Areal</option>
+                    <option value="armacao-dos-buzios">Armação dos Búzios</option>
+                    <option value="arraial-do-cabo">Arraial do Cabo</option>
+                    <option value="barra-do-pirai">Barra do Piraí</option>
+                    <option value="barra-mansa">Barra Mansa</option>
+                    <option value="belford-roxo">Belford Roxo</option>
+                    <option value="bom-jardim">Bom Jardim</option>
+                    <option value="bom-jesus-do-itabapoana">Bom Jesus do Itabapoana</option>
+                    <option value="cabo-frio">Cabo Frio</option>
+                    <option value="cachoeiras-de-macacu">Cachoeiras de Macacu</option>
+                    <option value="cambuci">Cambuci</option>
+                    <option value="campos-dos-goytacazes">Campos dos Goytacazes</option>
+                    <option value="cantagalo">Cantagalo</option>
+                    <option value="carapebus">Carapebus</option>
+                    <option value="cardoso-moreira">Cardoso Moreira</option>
+                    <option value="carmo">Carmo</option>
+                    <option value="casimiro-de-abreu">Casimiro de Abreu</option>
+                    <option value="comendador-levi-gasparian">Comendador Levy Gasparian</option>
+                    <option value="conceicao-de-macabu">Conceição de Macabu</option>
+                    <option value="cordeiro">Cordeiro</option>
+                    <option value="duas-barras">Duas Barras</option>
+                    <option value="duque-de-caxias">Duque de Caxias</option>
+                    <option value="engenheiro-paulo-de-frontin">Engenheiro Paulo de Frontin</option>
+                    <option value="guapimirim">Guapimirim</option>
+                    <option value="iguaba-grande">Iguaba Grande</option>
+                    <option value="itaborai">Itaboraí</option>
+                    <option value="itaguai">Itaguaí</option>
+                    <option value="italva">Italva</option>
+                    <option value="itaocara">Itaocara</option>
+                    <option value="itatiaia">Itatiaia</option>
+                    <option value="japeri">Japeri</option>
+                    <option value="laje-do-muriae">Laje do Muriaé</option>
+                    <option value="macae">Macaé</option>
+                    <option value="macuco">Macuco</option>
+                    <option value="magé">Magé</option>
+                    <option value="mangaratiba">Mangaratiba</option>
+                    <option value="marica">Maricá</option>
+                    <option value="mendes">Mendes</option>
+                    <option value="mesquita">Mesquita</option>
+                    <option value="miguel-pereira">Miguel Pereira</option>
+                    <option value="miracema">Miracema</option>
+                    <option value="natividade">Natividade</option>
+                    <option value="nilopolis">Nilópolis</option>
+                    <option value="niteroi">Niterói</option>
+                    <option value="nova-friburgo">Nova Friburgo</option>
+                    <option value="nova-iguacu">Nova Iguaçu</option>
+                    <option value="paracambi">Paracambi</option>
+                    <option value="paraiba-do-sul">Paraíba do Sul</option>
+                    <option value="paraty">Paraty</option>
+                    <option value="paty-do-alferes">Paty do Alferes</option>
+                    <option value="petropolis">Petrópolis</option>
+                    <option value="pinheiral">Pinheiral</option>
+                    <option value="pirai">Piraí</option>
+                    <option value="porciuncula">Porciúncula</option>
+                    <option value="porto-real">Porto Real</option>
+                    <option value="quatis">Quatis</option>
+                    <option value="queimados">Queimados</option>
+                    <option value="quissama">Quissamã</option>
+                    <option value="resende">Resende</option>
+                    <option value="rio-bonito">Rio Bonito</option>
+                    <option value="rio-claro">Rio Claro</option>
+                    <option value="rio-das-flores">Rio das Flores</option>
+                    <option value="rio-das-ostras">Rio das Ostras</option>
+                    <option value="rio-de-janeiro">Rio de Janeiro</option>
+                    <option value="santa-maria-madalena">Santa Maria Madalena</option>
+                    <option value="santo-antonio-de-padua">Santo Antônio de Pádua</option>
+                    <option value="sao-fidelis">São Fidélis</option>
+                    <option value="sao-francisco-de-itabapoana">São Francisco de Itabapoana</option>
+                    <option value="sao-goncalo">São Gonçalo</option>
+                    <option value="sao-joao-da-barra">São João da Barra</option>
+                    <option value="sao-joao-de-meriti">São João de Meriti</option>
+                    <option value="sao-jose-de-uba">São José de Ubá</option>
+                    <option value="sao-jose-do-vale-do-rio-preto">São José do Vale do Rio Preto</option>
+                    <option value="sao-pedro-da-aldeia">São Pedro da Aldeia</option>
+                    <option value="sao-sebastiao-do-alto">São Sebastião do Alto</option>
+                    <option value="sapucaia">Sapucaia</option>
+                    <option value="saquarema">Saquarema</option>
+                    <option value="seropedica">Seropédica</option>
+                    <option value="silva-jardim">Silva Jardim</option>
+                    <option value="sumidouro">Sumidouro</option>
+                    <option value="tangua">Tanguá</option>
+                    <option value="teresopolis">Teresópolis</option>
+                    <option value="trajano-de-moraes">Trajano de Moraes</option>
+                    <option value="tres-rios">Três Rios</option>
+                    <option value="valenca">Valença</option>
+                    <option value="varre-sai">Varre-Sai</option>
+                    <option value="vassouras">Vassouras</option>
+                    <option value="volta-redonda">Volta Redonda</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="tipo-espetaculo">Tipo de Espetáculo</label>
+                <select id="tipo-espetaculo">
+                    <option value="teatro">Teatro</option>
+                    <option value="cinema">Cinema</option>
+                    <option value="evento-cultural">Evento Cultural</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="date">Data</label>
+                <input type="date" id="date">
+            </div>
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+    </section>
+
+
+    <section class="cards">
+        <div class="card challengers">
+            <div class="poster">
+                <img src="imgs/poster_challengers.jpg" alt="Challengers">
+            </div>
+            <div class="details">
+                <img src="imgs/challengers.png" class="logo" alt="Challengers">
+                <h3>Dirigido por Luca Guadagnino</h3>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <span>4.1/5</span>
+                </div>
+                <div class="tags">
+                    <span>Drama</span>
+                    <span>Romance</span>
+                </div>
+                <div class="info">
+                    <p>Um campeão de tênis do Grand Slam se vê do outro lado da rede do outrora promissor e agora esgotado Patrick, seu ex-melhor amigo e ex-namorado de sua esposa.</p>
+                </div>
+                <div class="cast">
+                    <h4>Elenco</h4>
+                    <ul>
+                        <li><img src="imgs/zendaya.png" alt="Cast 1"></li>
+                        <li><img src="imgs/mikefaist.jpg" alt="Cast 2"></li>
+                        <li><img src="imgs/joshoconnor.jpg" alt="Cast 3"></li>
+                        <li><img src="imgs/haileygates.jpg" alt="Cast 4"></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card perfect-blue">
+            <div class="poster">
+                <img src="imgs/poster_perfectblue.jpg" alt="Perfect Blue">
+            </div>
+            <div class="details">
+                <img src="imgs/pftblue.png" class="logo" alt="Perfect Blue">
+                <h3>Dirigido por Satoshi Kon</h3>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <span>4.4/5</span>
+                </div>
+                <div class="tags">
+                    <span>Thriller</span>
+                    <span>Animação</span>
+                </div>
+                <div class="info">
+                    <p>Mima Kirigoe é uma cantora pop de uma banda CHAM!, mas decide se tornar uma atriz, tendo como primeiro projeto uma série de crime dramática. Muitos de seus fãs ficam chateados com sua decisão e uns deles, obcecado por Mima, começa a persegui-la e a enviar mensagens a chamando de traidora.</p>
+                </div>
+                <div class="cast">
+                    <h4>Elenco</h4>
+                    <ul>
+                        <li><img src="imgs/junkoiwao.jpg" alt="Junko Iwao"></li>
+                        <li><img src="imgs/matsumotorika.jpg" alt="Rika Matsumoto"></li>
+                        <li><img src="imgs/maasakiokura.jpg" alt="Masaaki Okura"></li>
+                        <li><img src="imgs/yousuke.jpg" alt="Yousuke Akimoto"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card dorival">
+            <div class="poster">
+                <img src="imgs/poster_dorival.jpg" alt="Perfect Blue">
+            </div>
+            <div class="details">
+                <img src="imgs/dorival.png" class="logo" alt="Dorival Cayman - Um Homem de Afetos ">
+                <h3>Dirigido por Daniela Broitman</h3>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <span>3.1/5</span>
+                </div>
+                <div class="tags">
+                    <span>Documentário</span>
+                </div>
+                <div class="info">
+                    <p>Uma das maiores figuras da música brasileira, Dorival Caymmi tem suas memórias e confidências relembradas por meio de uma inédita entrevista realizada em 1998.</p>
+                </div>
+                <div class="cast">
+                    <h4>Elenco</h4>
+                    <ul>
+                        <li><img src="imgs/dorival.jpg" alt="Junko Iwao"></li>
+                        <li><img src="imgs/caetano.jpg" alt="Rika Matsumoto"></li>
+                        <li><img src="imgs/gil.png" alt="Masaaki Okura"></li>
+                        <li><img src="imgs/nana.jpg" alt="Yousuke Akimoto"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card psycho">
+            <div class="poster">
+                <img src="imgs/poster_pyscho.jpg" alt="Perfect Blue">
+            </div>
+            <div class="details">
+                <img src="imgs/psycho.png" class="logo" alt="Psycho">
+                <h3>Dirigido por Alfred Hitchcock</h3>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <span>4.7/5</span>
+                </div>
+                <div class="tags">
+                    <span>Horror</span>
+                    <span>Suspense</span>
+                </div>
+                <div class="info">
+                    <p>Após roubar 40 mil dólares para se casar com o namorado, uma mulher foge durante uma tempestade e decide passar a noite em um hotel que encontra pelo caminho.
+                    O que parece ser uma simples estadia no local se torna uma verdadeira noite de terror.
+                    </p>
+                </div>
+                <div class="cast">
+                    <h4>Elenco</h4>
+                    <ul>
+                        <li><img src="imgs/janetleigh.jpg" alt="Junko Iwao"></li>
+                        <li><img src="imgs/veramiles.jpg" alt="Rika Matsumoto"></li>
+                        <li><img src="imgs/johngavin.jpg" alt="Masaaki Okura"></li>
+                        <li><img src="imgs/patricia.jpg" alt="Yousuke Akimoto"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Adicione mais cards conforme necessário -->
+    </section>
+</body>
+</html>

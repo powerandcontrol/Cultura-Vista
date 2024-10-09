@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'tabular';
+    src: url('/fonts/tabular/Tabular-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.contact-header {
+    padding: 10px 10px;
+    text-align: center;
+    color:#fff;
+    background-color: #3668d6;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 30px;
+}
+.contact-header h1 {
+    font-family: 'tabular';
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+.contact-header p {
+    font-size: 1.2em;
+    color: #666;
+}
+.contact-container {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.contact-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.contact-container form {
+    display: flex;
+    flex-direction: column;
+}
+.contact-container label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.contact-container input, .contact-container textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.contact-container button {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px;
+    background: #3668d6;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+.contact-container button:hover {
+    background: #294a9d;
+}

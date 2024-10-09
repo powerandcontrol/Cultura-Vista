@@ -1,0 +1,120 @@
+body {
+  background: #2e3b4e;
+  color: #000;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: #fff;
+  align-items: center;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+}
+
+h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.input-group i {
+  position: absolute;
+  left: 10px;
+  color: #555;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px 10px 10px 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  transition-duration: .3s;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.date-buttons button, .time-buttons button {
+  background-color: #6c6d6e;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  width: calc(25% - 10px); /* Ajuste a largura para permitir quatro botões por linha */
+  box-sizing: border-box; /* Inclui padding e borda na largura total */
+  text-align: center;
+  border-radius: 5px;
+}
+
+.date-buttons button.selected, .time-buttons button.selected {
+  background-color: #6b7899;
+  color: #fff;
+  border: none;
+}
+
+.date-buttons, .time-buttons {
+  display: flex;
+  flex-wrap: wrap; /* Permite quebra de linha quando necessário */
+  width: 100%; /* Mantém a largura consistente */
+  justify-content: flex-start; /* Alinha os itens à esquerda */
+}
+
+#ticket-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Adicionando estilos ao select */
+.select-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#cinema {
+  width: 100%;
+  padding: 10px 10px 10px 30px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  -webkit-appearance: none; /* Remove o estilo padrão do select no Chrome e Safari */
+  -moz-appearance: none; /* Remove o estilo padrão do select no Firefox */
+  appearance: none; /* Remove o estilo padrão do select no Opera */
+  background: transparent;
+}

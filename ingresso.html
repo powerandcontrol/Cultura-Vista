@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reserva de Ingressos</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons|Material+Icons|Material+Icons|Material+Icons" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/ingressos.css">
+  <script src="scripts/scripts.js" defer></script>
+</head>
+<body>
+  <div class="main-container">
+    <div class="center">
+      <div class="tickets">
+        <div class="ticket-selector">
+          <div class="head">
+           
+          </div>
+          <div class="seats">
+            <div class="status">
+              <div class="item">Disponível</div>
+              <div class="item">Ocupado</div>
+              <div class="item">Selecionado</div>
+            </div>
+            <div class="all-seats"></div>
+          </div>
+          <div class="timings">
+            <div class="dates">
+              <input type="radio" name="date" id="d1" checked>
+              <label for="d1" class="dates-item">
+                <div class="day">Dom</div>
+                <div class="date">11</div>
+              </label>
+              <input type="radio" id="d2" name="date">
+              <label class="dates-item" for="d2">
+                <div class="day">Seg</div>
+                <div class="date">12</div>
+              </label>
+              <input type="radio" id="d3" name="date">
+              <label class="dates-item" for="d3">
+                <div class="day">Ter</div>
+                <div class="date">13</div>
+              </label>
+              <input type="radio" id="d4" name="date">
+              <label class="dates-item" for="d4">
+                <div class="day">Qua</div>
+                <div class="date">14</div>
+              </label>
+              <input type="radio" id="d5" name="date">
+              <label class="dates-item" for="d5">
+                <div class="day">Qui</div>
+                <div class="date">15</div>
+              </label>
+              <input type="radio" id="d6" name="date">
+              <label class="dates-item" for="d6">
+                <div class="day">Sex</div>
+                <div class="date">16</div>
+              </label>
+              <input type="radio" id="d7" name="date">
+              <label class="dates-item" for="d7">
+                <div class="day">Sáb</div>
+                <div class="date">17</div>
+              </label>
+            </div>
+            <div class="times">
+              <input type="radio" name="time" id="t1" checked>
+              <label for="t1" class="time">11:00</label>
+              <input type="radio" id="t2" name="time">
+              <label for="t2" class="time">14:30</label>
+              <input type="radio" id="t3" name="time">
+              <label for="t3" class="time">18:00</label>
+              <input type="radio" id="t4" name="time">
+              <label for="t4" class="time">21:00</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <h2>Resumo do pedido</h2>
+      <div class="movie-summary">
+        <img src="" alt="Poster do Filme" id="movie-poster">
+        <div>
+          <h3 id="movie-title">Nome do Filme</h3>
+          <p><span class="badge" id="movie-type">2D</span> <span class="badge" id="movie-classification">LEGENDADO</span></p>
+          <p id="movie-genre">Gênero</p>
+          <p id="movie-location">Estação NET Botafogo, Rio de Janeiro</p>
+          <p><a href="#" id="movie-details">Ver detalhes</a></p>
+        </div>
+      </div>
+      <div class="showtime-info">
+        <p>SALA 1</p>
+        <p>QUI 06/06 21:00</p>
+      </div>
+      <div class="price-summary">
+        <span> <span class="count">0</span> Ingressos </span>
+        <div class="selected-seats"></div>
+        <p>Total:</p>
+         <div class="amount">R$ 0,00</div>   
+         
+         <button type="button">Reservar</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    const seatsContainer = document.querySelector(".all-seats");
+
+    const layout = [
+      { row: "A", seats: 10 },
+      { row: "B", seats: 10 },
+      { row: "C", seats: 10 },
+      { row: "D", seats: 10 },
+      { row: "E", seats: 10 },
+      { row: "F", seats: 10 },
+      { row: "G", seats: 10 },
+      { row: "O", seats: 10 },
+      { row: "P", seats: 10 },
+      { row: "Q", seats: 10 },
+      { row: "R", seats: 10 },
+      { row: "S", seats: 10 },
+      { row: "T", seats: 10 },
+    ];
+
+    const breakRow = "G"; // Define até qual fileira adicionar antes da quebra
+    const addBreakRow = (row, seats) => {
+      const rowContainer = document.createElement('div');
+      rowContainer.classList.add('row');
+      rowContainer.innerHTML = `<div class="row-label">${row}</div>`;
+      for (let i = 0; i < seats; i++) {
+        const isBooked = Math.random() < 0.2;
+        rowContainer.innerHTML += `
+          <input type="checkbox" name="tickets" id="seat-${row}${i}" ${isBooked ? 'disabled' : ''}>
+          <label for="seat-${row}${i}" class="seat ${isBooked ? 'booked' : ''}"></label>
+        `;
+      }
+      rowContainer.innerHTML += `<div class="row-label">${row}</div>`;
+      seatsContainer.appendChild(rowContainer);
+    };
+
+    layout.forEach(({ row, seats }) => {
+      addBreakRow(row, seats);
+      if (row === breakRow) {
+        const breakSpace = document.createElement('div');
+        breakSpace.style.height = '20px'; // Espaço entre os blocos
+        seatsContainer.appendChild(breakSpace);
+      }
+    });
+
+    const updateSelection = () => {
+      let amount = 0;
+      let count = 0;
+      let selectedSeats = [];
+
+      const tickets = document.querySelectorAll("input[name='tickets']");
+      tickets.forEach((ticket) => {
+        if (ticket.checked) {
+          count += 1;
+          amount += 10;
+          const seatId = ticket.id.split('-')[1];
+          selectedSeats.push(seatId);
+        }
+      });
+
+      document.querySelector(".amount").innerHTML = `R$ ${amount.toFixed(2)}`;
+      document.querySelector(".count").innerHTML = count;
+      document.querySelector(".selected-seats").innerHTML = `Assentos Selecionados: ${selectedSeats.join(', ')}`;
+    };
+
+    const tickets = document.querySelectorAll("input[name='tickets']");
+    tickets.forEach((ticket) => {
+      ticket.addEventListener("change", updateSelection);
+    });
+
+    updateSelection(); // Atualiza a seleção inicialmente
+
+    // Carrega as informações do filme selecionado
+    const movie = JSON.parse(localStorage.getItem('selectedMovie'));
+    if (movie) {
+      document.getElementById('movie-title').innerText = movie.title;
+      document.getElementById('movie-genre').innerText = movie.genre;
+      document.getElementById('movie-poster').src = movie.poster;
+      document.getElementById('movie-type').innerText = '2D';
+      document.getElementById('movie-classification').innerText = 'LEGENDADO';
+    }
+  </script>
+</body>
+</html>

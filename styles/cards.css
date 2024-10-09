@@ -1,0 +1,238 @@
+.cards {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card{
+    position: relative;
+    width: 320px;
+    height: 450px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+.card .poster{
+    position: relative;
+    overflow: hidden;
+}
+
+.card .poster::before{
+    content:'';
+    position: absolute;
+    bottom: -180px;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+/* Card Filme Challengers*/
+.card.challengers .poster::before{
+    background: linear-gradient(0deg,#570980 50%,
+    transparent);
+}
+
+.card.challengers {
+    background-color: #421666; /* Cor de fundo específica para o novo filme */
+}
+
+.card.challengers .details{
+    bottom: -185px;
+}
+
+.card.challengers .details .tags span{
+    padding: 2px 5px;
+    color: white;
+    background: #324e5b;
+    border-radius: 4px;
+}
+
+.card.challengers .details .tags span:nth-child(2){
+    background: #c30e14;
+}
+
+/* Card Filme Challengers*/
+
+/* Card Filme Dorival*/
+.card.dorival .poster::before{
+    background: linear-gradient(0deg,#09645d 50%,
+    transparent);
+}
+
+.card.dorival {
+    background-color: #166657; /* Cor de fundo específica para o novo filme */
+}
+
+.card.dorival .details{
+    bottom: -190px;
+}
+
+.card.dorival .details .tags span{
+    padding: 2px 5px;
+    color: white;
+    background: #82490d;
+    border-radius: 4px;
+}
+
+/* Card Filme Dorival*/
+
+
+/* Card Filme Dorival*/
+.card.psycho .poster::before{
+    background: linear-gradient(0deg,#645b09 50%,
+    transparent);
+}
+
+.card.psycho {
+    background-color: #665916; /* Cor de fundo específica para o novo filme */
+}
+
+.card.psycho .details{
+    bottom: -227px;
+}
+
+.card.psycho .details .tags span{
+    padding: 2px 5px;
+    color: white;
+    background: #5e1d2e;
+    border-radius: 4px;
+}
+
+.card.psycho .details .tags span:nth-child(2){
+    background: #130f48;
+}
+
+.card.psycho .details .logo{
+    max-width: 120px;
+}
+
+/* Card Filme Dorival*/
+
+/* Card Filme Perfect Blue*/
+
+.card.perfect-blue .poster::before{
+    background: linear-gradient(0deg,#79371a 50%,
+    transparent);
+}
+
+.card.perfect-blue {
+    background-color: #664216; /* Cor de fundo específica para o novo filme */
+}
+
+.card.perfect-blue .details{
+    bottom: -243px;
+}
+
+.card.perfect-blue .details .tags span{
+    padding: 2px 5px;
+    color: white;
+    background: #370e4e;
+    border-radius: 4px;
+}
+
+.card.perfect-blue .details .tags span:nth-child(2){
+    background: #a07f09;
+}
+
+/* Card Filme Perfect Blue*/
+
+.card:hover .poster::before{
+    bottom: 0px;
+}
+
+.card .poster img{
+    width: 100%;
+    transition: 0.5s;
+}
+
+.card:hover .poster img{
+    transform: translateY(-50px);
+    filter: blur(5px);
+}
+
+.card .details{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    padding: 20px;
+    z-index: 2;
+    transition: 0.5s;
+}
+
+.card:hover .details{
+    bottom: 40px;
+}
+
+.card .details .logo{
+    max-width: 180px;
+}
+
+.card .details h3{
+    font-size: 0.8em;
+    color: white;
+
+}
+
+.card .details .rating{
+    position: relative;
+    padding: 5px 0;
+}
+
+.card .details .rating .fa-star{
+    color: #f7f406;
+    font-size: 1em;
+}
+
+.card .details .rating span{
+    color: white;
+    margin-left: 5px;
+}
+
+.card .details .tags{
+    position: relative;
+    margin-top:5px;
+
+}
+
+.card .details .info{
+    color: white;
+    margin-top: 10px;
+}
+
+.card .details .info p{
+    margin-right: 30px;
+}
+
+.card .details .cast{
+    position: relative;
+}
+
+.card .details .cast h4{
+    color: white;
+    margin-top: 10px;
+}
+
+.card .details .cast ul{
+    position: relative;
+    display: flex;
+    margin-top: 10px;
+}
+
+.card .details .cast ul li{
+    list-style: none;
+    width: 35px;
+    height: 35px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.card .details .cast ul li img{
+    max-width: 100%;
+}
+

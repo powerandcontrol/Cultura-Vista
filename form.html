@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comprar Ingresso</title>
+  <link rel="stylesheet" href="styles/form.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="container">
+    <h1>Área de Compra</h1>
+    <form id="selection-form">
+      <label for="movie-title">Filme:</label>
+      <div class="input-group">
+        <i class="fa-solid fa-film"></i>
+        <input type="text" id="movie-title" name="movie-title" required>
+      </div>
+      
+      <label for="cinema">Cinema:</label>
+      <div class="input-group">
+        <i class="fa-solid fa-video"></i>
+        <select id="cinema" name="cinema" required>
+          <option value="Cinépolis Lagoon">Cinépolis Lagoon - Av. Borges de Medeiros, 1424 - Lagoa</option>
+          <option value="Kinoplex Rio Sul">Kinoplex Rio Sul - Rua Lauro Müller, 116 - Botafogo</option>
+          <option value="Cinemark Downtown">Cinemark Downtown - Av. das Américas, 500 - Barra da Tijuca</option>
+          <option value="UCI New York City Center">UCI New York City Center - Av. das Américas, 5000 - Barra da Tijuca</option>
+          <option value="Estação NET Botafogo">Estação NET Botafogo - Rua Voluntários da Pátria, 88 - Botafogo</option>
+          <option value="Cine Odeon">Cine Odeon - Praça Floriano, 7 - Centro</option>
+          <option value="Espaço Itaú de Cinema">Espaço Itaú de Cinema - Praia de Botafogo, 316 - Botafogo</option>
+          <option value="Cinemark Plaza Shopping">Cinemark Plaza Shopping - Av. das Américas, 19.900 - Recreio dos Bandeirantes</option>
+          <option value="Kinoplex Tijuca">Kinoplex Tijuca - Av. Maracanã, 987 - Tijuca</option>
+          <option value="UCI ParkShopping Campo Grande">UCI ParkShopping Campo Grande - Estrada do Monteiro, 1200 - Campo Grande</option>
+          <option value="Roxy Copacabana">Roxy Copacabana - Av. Nossa Sra. de Copacabana, 945 - Copacabana</option>
+          <option value="CineCarioca Nova Brasília">CineCarioca Nova Brasília - Estrada do Itararé, 238 - Bonsucesso</option>
+          <option value="Cinemark Carioca Shopping">Cinemark Carioca Shopping - Av. Vicente de Carvalho, 909 - Vila da Penha</option>
+          <option value="Kinoplex Nova América">Kinoplex Nova América - Av. Pastor Martin Luther King Jr., 126 - Del Castilho</option>
+        </select>
+      </div>
+
+      <button type="submit" class="comprar">Escolher Data e Hora</button>
+    </form>
+
+    <div id="ticket-section" style="display: none;">
+      <form id="ticket-form">
+        <label for="quantity">Quantidade de Ingressos:</label>
+        <div class="input-group">
+          <i class="fa-solid fa-ticket-alt"></i>
+          <input type="number" id="quantity" name="quantity" max="2" required>
+        </div>
+        
+        <label>Data:</label>
+        <div id="date-buttons" class="date-buttons">
+          <button type="button" data-date="2024-06-18">18/06</button>
+          <button type="button" data-date="2024-06-19">19/06</button>
+          <!-- Adicione mais botões conforme necessário -->
+        </div>
+        
+        <label>Hora:</label>
+        <div id="time-buttons" class="time-buttons">
+          <button type="button">14:00</button>
+          <button type="button">15:25</button>
+          <button type="button">18:00</button>
+          <button type="button">21:00</button>
+          <!-- Adicione mais botões conforme necessário -->
+        </div>
+        
+        <input type="hidden" id="date" name="date" required>
+        <input type="hidden" id="time" name="time" required>
+        
+        <button type="submit" class="comprar">Comprar
+  
+        </button>
+      </form>
+    </div>
+  </div>
+  
+  <script src="scripts/form.js"></script>
+</body>
+</html>

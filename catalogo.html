@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Filmes</title>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles/cine.css">
+    <link rel="stylesheet" href="styles/cards.css">
+    <link rel="stylesheet" href="styles/catalogo.css">
+</head>
+<body>
+    <header class="header" style="margin-bottom: 30px">
+        <div class="logo">
+            <img src="imgs/logo.png" alt="Logo">
+        </div>
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="catalogo-filmes.html">Catálogo</a>
+            <a href="catalogo.html">Em Cartaz</a>
+            <a href="ajuda.html">Ajuda</a>
+            <form id="search-form" action="filme-selecionado.html" method="get">
+                <input class="movie__search" id="movie-search" name="title" type="text" placeholder="Busque por um filme"/>
+            </form>
+            <a href="#" class="profile-icon"><i class="fas fa-user-circle"></i></a>
+        </nav>
+    </header>
+    <!-- HERO SECTION -->
+    <div class="hero-section">
+        <!-- HERO SLIDE -->
+        <div class="hero-slide">
+            <div class="owl-carousel carousel-nav-center" id="hero-carousel">
+                <!-- SLIDE ITEM -->
+                <div class="hero-slide-item">
+                    <img src="imgs/maxxxine-banner.jpg" alt="">
+                    <div class="overlay"></div>
+                    <div class="hero-slide-item-content">
+                        <div class="item-content-wraper">
+                            <div class="item-content-title top-down">
+                                MaXXXine
+                            </div>
+                            <div class="movie-infos top-down delay-2">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star" style="color:rgb(253, 217, 12);"></i>
+                                    <span>N/R</span>
+                                </div>
+                                <div class="movie-info">
+                                    <i class="bx bxs-time" style="color:rgb(8, 121, 31);"></i>
+                                    <span>101 mins</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>HD</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>18+</span>
+                                </div>
+                            </div>
+                            <div class="item-content-description top-down delay-4">
+                                Na trama, a jovem tenta deixar seu passado sombrio para trás enquanto busca realizar o sonho de se tornar uma grande atriz do cinema em Los Angeles. Porém, ao mesmo tempo, um assassino persegue as estrelas de Hollywood. 
+                            </div>
+                            <div class="item-action top-down delay-6">
+                                <a href="#" class="btn btn-hover">
+                                    <i class="bx bxs-right-arrow"></i>
+                                    <span>Pré-venda</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END SLIDE ITEM -->
+                <!-- SLIDE ITEM -->
+                <div class="hero-slide-item">
+                    <img src="imgs/chihiro-banner.jpeg" alt="">
+                    <div class="overlay"></div>
+                    <div class="hero-slide-item-content">
+                        <div class="item-content-wraper">
+                            <div class="item-content-title top-down">
+                                A Viagem de Chihiro
+                            </div>
+                            <div class="movie-infos top-down delay-2">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star" style="color:rgb(253, 217, 12);"></i>
+                                    <span>9.6</span>
+                                </div>
+                                <div class="movie-info">
+                                    <i class="bx bxs-time" style="color:rgb(8, 121, 31);"></i>
+                                    <span>125 mins</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>HD</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>L</span>
+                                </div>
+                            </div>
+                            <div class="item-content-description top-down delay-4">
+                                Chihiro e seus pais estão se mudando para uma cidade diferente. A caminho da nova casa, o pai decide pegar um atalho. Eles se deparam com uma mesa repleta de comida, embora ninguém esteja por perto. Chihiro sente o perigo, mas seus pais começam a comer. Quando anoitece, eles se transformam em porcos. Agora, apenas Chihiro pode salvá-los.                            </div>
+                            <div class="item-action top-down delay-6">
+                                <a href="#" class="btn btn-hover">
+                                    <i class="bx bxs-right-arrow"></i>
+                                    <span>Assista Já!</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END SLIDE ITEM -->
+                <!-- SLIDE ITEM -->
+                <div class="hero-slide-item">
+                    <img src="imgs/poorthings-banner.jpeg" alt="">
+                    <div class="overlay"></div>
+                    <div class="hero-slide-item-content">
+                        <div class="item-content-wraper">
+                            <div class="item-content-title top-down">
+                                Pobres Criaturas
+                            </div>
+                            <div class="movie-infos top-down delay-2">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star" style="color:rgb(253, 217, 12);"></i>
+                                    <span>8.8</span>
+                                </div>
+                                <div class="movie-info">
+                                    <i class="bx bxs-time" style="color:rgb(8, 121, 31);"></i>
+                                    <span>141 mins</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>HD</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>16+</span>
+                                </div>
+                            </div>
+                            <div class="item-content-description top-down delay-4">
+                                A jovem Bella Baxter é trazida de volta à vida pelo cientista Dr. Godwin Baxter. Querendo ver mais do mundo, ela foge com um advogado e viaja pelos continentes. Livre dos preconceitos de sua época, Bella exige igualdade e libertação.                            </div>
+                            <div class="item-action top-down delay-6">
+                                <a href="#" class="btn btn-hover">
+                                    <i class="bx bxs-right-arrow"></i>
+                                    <span>Assista Já!</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END SLIDE ITEM -->
+            </div>
+        </div>
+        <!-- END HERO SLIDE -->
+    <section class="cards">
+        <div class="card challengers">
+            <div class="poster">
+                <img src="imgs/poster_challengers.jpg" alt="Challengers">
+            </div>
+            <div class="details">
+                <img src="imgs/challengers.png" class="logo" alt="Challengers Logo">
+                <h3>Dirigido por Luca Guadagnino</h3>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <span>4.1/5</span>
+                </div>
+                <div class="tags">
+                    <span>Drama</span>
+                    <span>Romance</span>
+                </div>
+                <div class="info">
+                    <p>Um campeão de tênis do Grand Slam se vê do outro lado da rede do outrora promissor e agora esgotado Patrick, seu ex-melhor amigo e ex-namorado de sua esposa.</p>
+                </div>
+                <div class="cast">
+                    <h4>Elenco</h4>
+                    <ul>
+                        <li><img src="imgs/zendaya.png" alt="Zendaya"></li>
+                        <li><img src="imgs/mikefaist.jpg" alt="Mike Faist"></li>
+                        <li><img src="imgs/joshoconnor.jpg" alt="Josh O'Connor"></li>
+                        <li><img src="imgs/haileygates.jpg" alt="Hailey Gates"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card perfect-blue">
+            <div class="poster">
+                <img src="imgs/poster_perfectblue.jpg" alt="Perfect Blue">
+            </div>
+            <div class="details">
+                <img src="imgs/pftblue.png" class="logo" alt="Perfect Blue Logo">
+                <h3>Dirigido por Satoshi Kon</h3>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <span>4.4/5</span>
+                </div>
+                <div class="tags">
+                    <span>Thriller</span>
+                    <span>Animação</span>
+                </div>
+                <div class="info">
+                    <p>Mima Kirigoe é uma cantora pop de uma banda CHAM!, mas decide se tornar uma atriz, tendo como primeiro projeto uma série de crime dramática. Muitos de seus fãs ficam chateados com sua decisão e uns deles, obcecado por Mima, começa a persegui-la e a enviar mensagens a chamando de traidora.</p>
+                </div>
+                <div class="cast">
+                    <h4>Elenco</h4>
+                    <ul>
+                        <li><img src="imgs/junkoiwao.jpg" alt="Junko Iwao"></li>
+                        <li><img src="imgs/matsumotorika.jpg" alt="Rika Matsumoto"></li>
+                        <li><img src="imgs/maasakiokura.jpg" alt="Masaaki Okura"></li>
+                        <li><img src="imgs/yousuke.jpg" alt="Yousuke Akimoto"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card dorival">
+            <div class="poster">
+                <img src="imgs/poster_dorival.jpg" alt="Dorival">
+            </div>
+            <div class="details">
+                <img src="imgs/dorival.png" class="logo" alt="Dorival Logo">
+                <h3>Dirigido por Daniela Broitman</h3>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <span>3.1/5</span>
+                </div>
+                <div class="tags">
+                    <span>Documentário</span>
+                </div>
+                <div class="info">
+                    <p>Uma das maiores figuras da música brasileira, Dorival Caymmi tem suas memórias e confidências relembradas por meio de uma inédita entrevista realizada em 1998.</p>
+                </div>
+                <div class="cast">
+                    <h4>Elenco</h4>
+                    <ul>
+                        <li><img src="imgs/dorival.jpg" alt="Dorival"></li>
+                        <li><img src="imgs/caetano.jpg" alt="Caetano"></li>
+                        <li><img src="imgs/gil.png" alt="Gil"></li>
+                        <li><img src="imgs/nana.jpg" alt="Nana"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card psycho">
+            <div class="poster">
+                <img src="imgs/poster_pyscho.jpg" alt="Psycho">
+            </div>
+            <div class="details">
+                <img src="imgs/psycho.png" class="logo" alt="Psycho Logo">
+                <h3>Dirigido por Alfred Hitchcock</h3>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <span>4.7/5</span>
+                </div>
+                <div class="tags">
+                    <span>Horror</span>
+                    <span>Suspense</span>
+                </div>
+                <div class="info">
+                    <p>Após roubar 40 mil dólares para se casar com o namorado, uma mulher foge durante uma tempestade e decide passar a noite em um hotel que encontra pelo caminho. O que parece ser uma simples estadia no local se torna uma verdadeira noite de terror.</p>
+                </div>
+                <div class="cast">
+                    <h4>Elenco</h4>
+                    <ul>
+                        <li><img src="imgs/janetleigh.jpg" alt="Janet Leigh"></li>
+                        <li><img src="imgs/veramiles.jpg" alt="Vera Miles"></li>
+                        <li><img src="imgs/johngavin.jpg" alt="John Gavin"></li>
+                        <li><img src="imgs/patricia.jpg" alt="Patricia"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <!-- SCRIPT -->
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- OWL CAROUSEL -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+    <!-- APP SCRIPT -->
+    <script src="scripts/catalogo.js"></script>
+    <script src="scripts/busca.js"></script>
+
+</body>
+</html>
